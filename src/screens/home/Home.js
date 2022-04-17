@@ -5,6 +5,8 @@ import '@splidejs/splide/dist/css/splide.min.css';
 import moviesData from "../../common/moviesData";
 import './Home.css';
 import Header from "../../common/header/Header";
+import FindMovie from "./FindMovie";
+
 
 
 //I'm not using Single line Grid list because splide slice is better than that
@@ -59,7 +61,9 @@ export default class Home extends Component {
 
                     </div>
                     <div>
-                        second part
+
+                        <FindMovie />
+
                     </div>
                 </div>
 

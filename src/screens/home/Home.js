@@ -9,6 +9,7 @@ import FindMovie from "./FindMovie";
 
 
 
+
 //I'm not using Single line Grid list because splide slice is better than that
 export default class Home extends Component {
 
@@ -16,11 +17,13 @@ export default class Home extends Component {
 
 
         return (
+
+
             <div>
+
                 <Header />
 
                 <div className="Upcoming">UpComing movies</div>
-
                 <Splide options={{
                     perPage: 4,
                     arrows: false, pagination: false, drag: 'free', gap: '3rem'
@@ -28,6 +31,7 @@ export default class Home extends Component {
                     {moviesData.map(res => {
                         return (
                             <SplideSlide key={res.id}>
+
                                 <div className="Card">
                                     <p>
                                         {res.title}
@@ -36,6 +40,7 @@ export default class Home extends Component {
                                     <div className="Gradient"></div>
 
                                 </div>
+
                             </SplideSlide>
                         );
                     })}
@@ -46,7 +51,7 @@ export default class Home extends Component {
                         {moviesData.map(res => {
                             return (
 
-                                <div className="Grid-Card">
+                                <div className="Grid-Card" key={res.id}>
 
 
                                     <img src={res.poster_url} alt="Not Available" />
@@ -69,10 +74,13 @@ export default class Home extends Component {
 
 
             </div>
+
+
         )
 
 
     }
+
 
 
 

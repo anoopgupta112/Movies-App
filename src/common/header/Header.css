@@ -5,7 +5,17 @@ body {
 
 }
 
+.logo {
+    background-color: rgba(0, 0, 0, 0.699);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .img-file {
+    position: relative;
+    top: 10px;
+    left: 10px;
     background-color: #ff7f7f;
     height: 35px;
     animation: rotate 8s infinite linear;

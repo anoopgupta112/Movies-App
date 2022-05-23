@@ -1,11 +1,13 @@
 import { Component } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
-
+import { Link } from 'react-router-dom';
 import moviesData from "../../common/moviesData";
 import './Home.css';
 import Header from "../../common/header/Header";
 import FindMovie from "./FindMovie";
+import Details from '../details/Details'
+
 
 
 
@@ -17,7 +19,6 @@ export default class Home extends Component {
 
 
         return (
-
 
             <div>
 
@@ -31,15 +32,17 @@ export default class Home extends Component {
                     {moviesData.map(res => {
                         return (
                             <SplideSlide key={res.id}>
+                                <Link to='details'>
 
-                                <div className="Card">
-                                    <p>
-                                        {res.title}
-                                    </p>
-                                    <img src={res.poster_url} alt="Not Available" />
-                                    <div className="Gradient"></div>
+                                    <div className="Card">
+                                        <p>
+                                            {res.title}
+                                        </p>
+                                        <img src={res.poster_url} alt="Not Available" />
+                                        <div className="Gradient"></div>
 
-                                </div>
+                                    </div>
+                                </Link>
 
                             </SplideSlide>
                         );
@@ -73,7 +76,8 @@ export default class Home extends Component {
                 </div>
 
 
-            </div>
+            </div >
+
 
 
         )
